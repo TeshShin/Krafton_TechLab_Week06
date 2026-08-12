@@ -1,3 +1,36 @@
+## 내가 맡은 부분 — 신동민
+
+**기간** 2025.10.10 – 10.15 · **팀** 4인 · **내 커밋** 47건
+
+| 구현 | 내용 |
+| --- | --- |
+| **데칼 시스템** | `DecalComponent` + `DecalPass` 구현. 머터리얼 변경, 사이즈 조절, ShowFlag, **페이드 인/아웃**, 다른 액터에서도 페이드 동작, 페이드가 끝나면 틱도 정지 |
+| **FXAA** | 구현 후 대각 방향 처리로 계단 현상 제거, 파라미터 조정 가능하도록. FXAA 적용 시 전체 화면 뷰포트로 복구되지 않던 문제 수정 |
+| **빌보드·텍스트** | 자식 컴포넌트여도 부모와 무관하게 카메라를 향하도록 수정, 텍스트 길이에 맞춰 박스 크기가 변하도록 |
+| **씬 저장·로드** | 씬 세이브/로드 완성, SemiLight 직렬화, 서브오브젝트 복제 |
+| **씬 구성** | 태양계 행성·위성 에셋 정리 및 배치 |
+
+**주요 파일** `Engine/Source/Component/Private/DecalComponent.cpp` · `Engine/Source/Render/RenderPass/Private/DecalPass.cpp` · `Engine/Asset/Shader/FXAA.hlsl`
+
+→ **[내 커밋 47건 보기](https://github.com/TeshShin/Krafton_TechLab_Week06/commits?author=TeshShin)** · [14주 전체 정리](https://github.com/TeshShin/Krafton-TechLab-Roles)
+
+---
+
+## 이 주차 엔진에 추가된 것 (팀 전체)
+
+기존 기술문서가 PIE·Component Pattern 중심이라, 6주차에 실제로 들어간 기능을 아래에 정리합니다.
+
+- **데칼** — 데칼 컴포넌트/액터, 데칼 패스, SubUV 머터리얼 데칼, ShowFlag, 페이드 인/아웃, DecalPass에 BVH 적용
+- **FXAA** — 후처리 안티에일리어싱
+- **Scene BVH** — 씬 단위 BVH 구축 및 재귀 갱신, 디버그 뷰
+- **Scene Depth** — 씬 뎁스 뷰 모드 (PIE 모드에서는 비활성)
+- **Height Fog** — 높이 안개 액터·컴포넌트
+- **Semi Light** — 세미 라이트 액터, 스포트라이트 각도
+- **머터리얼** — 독립 머터리얼 로더, blend state
+- **기타** — cone batch line, projectile & rotating 컴포넌트, 씬 세이브/로드
+
+---
+
 # Week6 Team6 (김희준, 서명교, 신동민, 장수빈) 기술문서
 
 <!--
